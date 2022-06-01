@@ -1,0 +1,15 @@
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\bin\Debug\net6.0\PastasAutomatizadas.exe
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\bin\Debug\net6.0\PastasAutomatizadas.deps.json
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\bin\Debug\net6.0\PastasAutomatizadas.runtimeconfig.json
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\bin\Debug\net6.0\PastasAutomatizadas.dll
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\bin\Debug\net6.0\PastasAutomatizadas.pdb
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.csproj.AssemblyReference.cache
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.AssemblyInfoInputs.cache
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.AssemblyInfo.cs
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.csproj.CoreCompileInputs.cache
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.dll
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\refint\PastasAutomatizadas.dll
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.pdb
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\PastasAutomatizadas.genruntimeconfig.cache
+C:\Users\vinig\source\repos\PastasAutomatizadas\PastasAutomatizadas\obj\Debug\net6.0\ref\PastasAutomatizadas.dll
