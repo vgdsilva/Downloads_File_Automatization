@@ -12,32 +12,29 @@ string[] documents_extentions = { ".doc", ".pdf", ".docx", ".txt", ".xls", ".xls
 
 Executar();
 
-
-
 void Executar()
 {
-    try
+    // Pegar todos arquivos que estão dentro da pasta Downloads
+    //Console.WriteLine(source_dir);
+    Console.WriteLine("               __                         __  .__             .___                  .__                    .___   _____.__.__          ");
+    Console.WriteLine(@"_____   __ ___/  |_  ____   _____ _____ _/  |_|__| ____     __| _/______  _  ______ |  |   _________     __| _/ _/ ____\__|  |   ____  ");
+    Console.WriteLine(@"\__  \ |  |  \   __\/  _ \ /     \\__  \\   __\  |/ ___\   / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  \   __\|  |  | _/ __ \ ");
+    Console.WriteLine(@" / __ \|  |  /|  | (  <_> )  Y Y  \/ __ \|  | |  \  \___  / /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |   |  |  |  |  |_\  ___/ ");
+    Console.WriteLine(@"(____  /____/ |__|  \____/|__|_|  (____  /__| |__|\___  > \____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   |__|  |__|____/\___  >");
+    Console.WriteLine(@"     \/                         \/     \/             \/       \/                 \/                \/      \/                      \/ ");
+
+    var files = from file in Directory.EnumerateFiles(source_dir) select file;
+    Console.WriteLine("Files: {0}", files.Count<string>().ToString());
+    Console.WriteLine("List of Files Moved:");
+    foreach (var file in files)
     {
-        // Pegar todos arquivos que estão dentro da pasta Downloads
-        Console.WriteLine(source_dir);
+        string source_file = file.Replace($@"{source_dir}\", " ");
+        //Console.WriteLine("{0}", fl);
 
-        var files = from file in Directory.EnumerateFiles(source_dir) select file;
-        Console.WriteLine("Files: {0}", files.Count<string>().ToString());
-        Console.WriteLine("List of Files Moved:");
-        foreach (var file in files)
-        {
-            string source_file = file.Replace($@"{source_dir}\", " ");
-            //Console.WriteLine("{0}", fl);
-
-            CheckImageFiles(file, images_extentions);
-            CheckDocumentsFiles(file, documents_extentions);
-        }
+        CheckImageFiles(file, images_extentions);
+        CheckDocumentsFiles(file, documents_extentions);
     }
-    catch (Exception)
-    {
 
-        throw;
-    }
 }
 
 void CheckImageFiles(string file, string[] extentions)
@@ -65,14 +62,20 @@ void CheckDocumentsFiles(string file, string[] extentions)
 /// <summary>
 /// Verificar se existe algum arquivo com o mesmo nome na pasta de destino
 /// </summary>
-void VerifyIfFileExists(string fileName, string dir, string[] extensions)
+string VerifyIfFileExists(string fileName, string dir)
 {
     int contador = 1;
+    string moveTo = Path.Combine(dir, fileName);
     do
     {
+        int indexSeparacaoNomeExtensao = fileName.IndexOf(".");
+        string file_name, file_extension;
         
+        file_name = fileName.Substring(0,indexSeparacaoNomeExtensao);
+        file_extension = fileName.Substring(indexSeparacaoNomeExtensao);
 
-
+        contador++;
+        return $@"{file_name}{contador}{file_extension}";
     } while (File.Exists(fileName));
 }
 
@@ -87,9 +90,6 @@ void VerifyIfDestinationExist(string destination_dir)
         Directory.CreateDirectory(destination_dir);
         Console.WriteLine(" Create the Directory");
     }
-
-
-
 }
 
 /// <summary>
@@ -99,6 +99,7 @@ void MoveFiles(string destination, string pathToMove, string fileName)
 {
     VerifyIfDestinationExist(destination);
 
+    string newFileName = VerifyIfFileExists(fileName, destination);
     string moveTo = Path.Combine(destination, fileName);
 
     File.Move(pathToMove, moveTo);
